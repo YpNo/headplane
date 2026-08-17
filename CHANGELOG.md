@@ -1,5 +1,6 @@
 # Next
 
+- Added Google Cloud Identity-Aware Proxy (IAP) authentication via `server.jwt_auth`. Unlike `server.proxy_auth`, the signed assertion is verified against the provider's published keys, so identity does not depend on trusting the client address (closes [#606](https://github.com/tale/headplane/issues/606)).
 - Fixed the Headplane agent falling back to an interactive Tailscale login. The agent now starts with a pre-auth-key, preserves its existing state across restarts, and auto-approves itself when Headscale requires manual approval (closes [#582](https://github.com/tale/headplane/issues/582)).
 
 # 0.7.0
