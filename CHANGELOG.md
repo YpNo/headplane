@@ -1,5 +1,8 @@
 # Next
 
+- Fixed concurrent first logins leaving Headplane with no owner. The check for an existing owner is now part of the promoting update rather than a separate count, so two people signing in at the same moment can no longer both skip the promotion.
+- Headplane now closes its database handle on shutdown instead of leaving it open.
+
 # 0.7.1 (August 27, 2026)
 
 ## Changes
